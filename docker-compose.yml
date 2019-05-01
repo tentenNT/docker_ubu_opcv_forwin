@@ -1,0 +1,13 @@
+version: '3'
+services:
+  ubuntu_opcv:
+    restart: always
+    build: .
+    container_name: 'ubu_ocv'
+    working_dir: '/root/opt'
+    ports:
+      - "2022:22"
+    tty: true
+    privileged: true
+    volumes:
+      - G:\tenten\docker_ubu_ocv_shared:/root/opt
